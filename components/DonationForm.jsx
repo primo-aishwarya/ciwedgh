@@ -20,10 +20,10 @@ export default function DonationForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    /*if (!amount || !email) {
-      alert("Please enter amount and email");
+    if (!amount || !email) {
+      // alert("Please enter amount and email");
       return;
-    }*/
+    }
 
     setLoading(true);
 
@@ -39,10 +39,6 @@ export default function DonationForm() {
       },
       callback: function (response) {
         setLoading(false);
-        setFormData({
-          amount:"",
-          email:"",
-        });
         // alert("Payment complete! Reference: " + response.reference);
         // You can verify payment on your server here
       },
